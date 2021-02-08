@@ -1,0 +1,66 @@
+{
+    "1": {
+        "id": 1,
+        "title": "Новость 1",
+        "text": "А у нас новость 1 и она очень хорошая!",
+        "isPrivate": false,
+        "category_id": 1,
+        "image": null
+    },
+    "2": {
+        "id": 2,
+        "title": "Новость 2",
+        "text": "А у нас новость 2 и она очень очень хорошая!",
+        "isPrivate": false,
+        "category_id": 1,
+        "image": null
+    },
+    "3": {
+        "id": 3,
+        "title": "Новость 3",
+        "text": "А тут плохие новости(((",
+        "isPrivate": false,
+        "category_id": 2,
+        "image": null
+    },
+    "4": {
+        "id": 4,
+        "title": "Новость 4",
+        "text": "А тут плохие плохие новости(((",
+        "isPrivate": false,
+        "category_id": 2,
+        "image": null
+    },
+    "5": {
+        "title": "123",
+        "category_id": "1",
+        "text": "123",
+        "isPrivate": true,
+        "id": 5,
+        "image": null
+    },
+    "6": {
+        "title": "asd",
+        "category_id": "1",
+        "text": "asd",
+        "isPrivate": false,
+        "id": 6,
+        "image": null
+    },
+    "7": {
+        "title": "asd",
+        "category_id": "1",
+        "text": "asd",
+        "isPrivate": true,
+        "id": 7,
+        "image": null
+    },
+    "8": {
+        "title": "1231",
+        "category_id": "1",
+        "text": "123123123",
+        "image": "\/storage\/A6XdcZcSge1ZeJRrvKXygsIEJVjBtklrnrx0GXX7.jpg",
+        "isPrivate": false,
+        "id": 8
+    }
+}
