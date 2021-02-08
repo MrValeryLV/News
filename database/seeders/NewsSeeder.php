@@ -2,10 +2,12 @@
 
 namespace Database\Seeders;
 
-use Faker\Factory;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Faker;
+use App\Models\News;
+use App\Models\User;
+
 
 class NewsSeeder extends Seeder
 {
@@ -16,7 +18,10 @@ class NewsSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('news')->insert($this->getData());
+        News::factory()->count(10)->create();
+
+        // factory(News::class, 10)->create();
+        // DB::table('news')->insert($this->getData());
     }
 
     private function getData() {

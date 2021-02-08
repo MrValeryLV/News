@@ -34,8 +34,11 @@ class NewsEditController extends Controller
                 $url = Storage::url($path);
             }
 
+            $this->validate($request, News::rules(), [], News::attributeNames());
+
             $news = new News();
             $news->image = $url;
+
             $news->fill($request->except('image'))->save();
 
 //DB
@@ -65,7 +68,8 @@ class NewsEditController extends Controller
         }
 
         return view('admin.create', [
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'news' => new News()
         ]);
     }
 
@@ -80,11 +84,14 @@ class NewsEditController extends Controller
         $url = null;
         // dd($request->image);
         if ($request->file('image')) {
-            $path = Storage::putFile('public', $request->file('image'));
+            $path = \Storage::putFile('public', $request->file('image'));
             $url = Storage::url($path);
         }
 
+        $this->validate($request, News::rules(), [], News::attributeNames());
+
         $news->image = $url;
+
         $news->fill($request->except('image'))->save();
 
         return redirect()->route('news.show', $news->id)->with('success', 'Новость изменена!');
