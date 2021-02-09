@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -18,21 +19,24 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::view('/about', 'about')->name('about');
 Route::view('/vue', 'vue')->name('vue');
 
 Route::name('admin.')
     ->prefix('admin')
     ->namespace('Admin')
+    ->middleware(['is_admin', 'auth'])
     ->group(
         function () {
+            Route::match(['get','post'],'/profile', [ProfileController::class, 'updateProfile'])->name('updateProfile');
             Route::get('/', [NewsEditController::class, 'index'])->name('index');
             Route::match(['get','post'],'/create', [NewsEditController::class, 'create'])->name('create');
             Route::get('/edit/{news}', [NewsEditController::class, 'edit'])->name('edit');
             Route::post('/update/{news}', [NewsEditController::class, 'update'])->name('update');
             Route::get('/destroy/{news}', [NewsEditController::class, 'destroy'])->name('destroy');
             Route::get('/downloader', [IndexController::class, 'downloader'])->name('downloader');
+            // todo перейти на resours (web, menu и menu.admin, NewsEditController + views) les-8
         }
     );
 

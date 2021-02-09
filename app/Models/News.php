@@ -23,7 +23,8 @@ class News extends Model
             'title' => ['required', 'min:10', 'max:20', new Admin()],
             'text' => 'required',
             'category_id' => "required|exists:{$tableNameCategory},id",
-            'image' => 'mimes:jpeg,png,bmp|max:1000'
+            'image' => 'mimes:jpeg,png,bmp|max:1000',
+            'isPrivate' => 'sometimes|in:1'
         ];
     }
 

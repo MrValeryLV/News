@@ -1,6 +1,3 @@
-<li class="nav-item {{ request()->routeIs('home')?'active':''}}">
-    <a class="nav-link" href="{{route('home') }}">Главная</a>
-</li>
 <li class="nav-item {{ request()->routeIs('news.index')?'active':''}}">
     <a class="nav-link" href="{{ route('news.index') }}">Новости</a>
 </li>

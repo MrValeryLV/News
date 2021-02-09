@@ -7,7 +7,7 @@ use App\Models\News;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class  CategoryController extends Controller
 {
     public function index() {
         $categories = Category::query()->get();
@@ -22,6 +22,8 @@ class CategoryController extends Controller
         $category = Category::query()->where('slug', $slug)->first();
 
         $news = News::query()->where('category_id', $category->id)->get();
+
+        // $news = $category->news;
 
         return view('news.category', [
             'news' => $news,

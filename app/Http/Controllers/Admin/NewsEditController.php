@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\DB;
 class NewsEditController extends Controller
 {
     public function index() {
-        $news = News::all();
 
+        $news = News::all();
 
         return view('admin.index',
         [
