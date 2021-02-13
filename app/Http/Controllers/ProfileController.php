@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -24,16 +24,16 @@ class ProfileController extends Controller
                     'email' => $request->post('email')
                 ]);
                 $user->save();
-                return redirect()->route('admin.updateProfile')->with('success', 'Профиль успешно изменен!');
+                return redirect()->route('updateProfile')->with('success', 'Профиль успешно изменен!');
 
             } else {
                 $errors['password'][] = 'Неверно введен текущий пароль';
-                return redirect()->route('admin.updateProfile')->withErrors($errors);
+                return redirect()->route('updateProfile')->withErrors($errors);
             }
         }
 
 
-        return view('admin.profile', [
+        return view('profile', [
             'user' => $user
         ]);
     }
