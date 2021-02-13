@@ -16,7 +16,7 @@
                         @forelse($news as $item)
                             <h2>{{ $item->title }}</h2>
                             <div class="card-img" style="background-image: url({{$item->image ?? asset('storage/default.jpeg')}})"></div>
-                            @if (!$item->isPrivate)
+                            @if (!$item->isPrivate || Auth::check())
                                 <a href="{{ route('news.show', $item->id) }}">Подробнее...</a><br>
                             @endif
                             <hr>

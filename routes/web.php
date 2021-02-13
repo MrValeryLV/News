@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ParserController;
 use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,9 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::view('/about', 'about')->name('about');
 Route::view('/vue', 'vue')->name('vue');
+
+Route::get('/auth/vk', [LoginController::class, 'loginVK'])->name('vklogin');
+Route::get('/auth/vk/response', [LoginController::class, 'responseVK'])->name('responseVK');
 
 Route::match(['get','post'],'/profile', [ProfileController::class, 'updateProfile'])->name('updateProfile');
 
