@@ -18,7 +18,7 @@ class NewsController extends Controller
         //$news = News::query()->where('isPrivate', false)->first();
         //$news = News::query()->where('isPrivate', false)->get();
         //пагинация
-        $news = News::query()->paginate(4);
+        $news = News::query()->paginate(9);
 
         return view('news.index')->with('news', $news);
     }

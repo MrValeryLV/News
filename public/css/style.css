@@ -1,6 +1,28 @@
+.cardBlock {
+    transition: 1s;
+}
+.cardBlock:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 1px #f8fafc;
+    padding: 5px;
+    border-radius: 15px;
+    z-index: 1;
+}
+
 .card-img {
-    height: 150px;
+    height: 250px;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.cardBlockCategory {
+    margin: 20px;
+    padding: 10px;
+    align-items: center;
+}
+
+.textHead {
+    margin: 10px;
+    text-align: center;
 }

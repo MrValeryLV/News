@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/', [NewsController::class, 'index'])->name('index');
 Route::view('/about', 'about')->name('about');
 Route::view('/vue', 'vue')->name('vue');
 
@@ -45,6 +45,7 @@ Route::name('admin.')
             Route::get('/destroy/{news}', [NewsEditController::class, 'destroy'])->name('destroy');
             Route::get('/users', [UsersController::class, 'index'])->name('updateUser');
             Route::get('/users/toggleAdmin/{user}', [UsersController::class, 'toggleAdmin'])->name('toggleAdmin');
+            Route::get('/users/destroyUser/{user}', [UsersController::class, 'destroy'])->name('destroyUser');
             Route::get('/parser', [ParserController::class, 'index'])->name('parser');
             Route::get('/downloader', [IndexController::class, 'downloader'])->name('downloader');
             // todo перейти на resours (web, menu и menu.admin, NewsEditController + views) les-8
@@ -71,6 +72,3 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth',
 });
 
 Auth::routes();
-
-
-//APP_URL=http://localhost

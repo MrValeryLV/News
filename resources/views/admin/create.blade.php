@@ -82,7 +82,12 @@
                                         @endforeach
                                     </div>
                                 @endif
-                                <input type="file" name="image">
+
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile" name="image">
+                                        <label class="custom-file-label" for="customFile">Нажмите что выбрать файл...</label>
+                                    </div>
+
                             </div>
 
                             <div class="form-check">

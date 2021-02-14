@@ -12,11 +12,13 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <h2>CRUD Новости</h2>
+                        <h2 class="textHead">CRUD Новости</h2>
                         @forelse($news as $item)
-                            <h3>{{ $item->title }}</h3>
-                            <a class="btn btn-success" href="{{ route('admin.edit', $item) }}">Edit</a>
-                            <a class="btn btn-danger" href="{{ route('admin.destroy', $item) }}">Destroy</a>
+                            <div class="textHead">
+                                <h5>{{ $item->title }}</h5>
+                                <a class="btn btn-success" href="{{ route('admin.edit', $item) }}">Редактировать новость</a>
+                                <a class="btn btn-danger" href="{{ route('admin.destroy', $item) }}">Удалить новость</a>
+                            </div>
                         @empty
                             Нет новостей
                         @endforelse

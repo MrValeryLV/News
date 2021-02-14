@@ -7,9 +7,3 @@
 <li class="nav-item {{ request()->routeIs('about')?'active':''}}">
     <a class="nav-link" href="{{ route('about') }}">О нас</a>
 </li>
-<li class="nav-item {{ request()->routeIs('admin.index')?'active':''}}">
-    <a class="nav-link" href="{{ route('admin.index') }}">Админка</a>
-</li>
-<li class="nav-item {{ request()->routeIs('vue')?'active':''}}">
-    <a class="nav-link" href="{{ route('vue') }}">Vue</a>
-</li>

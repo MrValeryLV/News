@@ -3,7 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="fef57fc8-b592-4da8-8764-39a87341e914" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ParserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ParserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/NewsEditController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/NewsEditController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news/One.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/One.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news/categories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/categories.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vue.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vue.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +192,8 @@
       <updated>1613207466897</updated>
       <workItem from="1613207472353" duration="9394000" />
       <workItem from="1613230099596" duration="230000" />
-      <workItem from="1613287543759" duration="7218000" />
+      <workItem from="1613287543759" duration="15729000" />
+      <workItem from="1613312050630" duration="6171000" />
     </task>
     <task id="LOCAL-00001" summary="-menu &quot;редактор профиля&quot; для user и admin&#10;-crud для ProfileController&#10;-composer remove /laravel/dusk">
       <created>1613210779053</created>
@@ -200,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613292911414</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="-NewsParsing обработчик задач (очередей когда много link)">
+      <created>1613295032873</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613295032874</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +245,17 @@
     <MESSAGE value="-menu &quot;редактор профиля&quot; для user и admin&#10;-crud для ProfileController&#10;-composer remove /laravel/dusk" />
     <MESSAGE value="- auth по соц сети vk (env)" />
     <MESSAGE value="-аватарка&#10;-html редактор (в main убрал id=app &quot;vue&quot;)&#10;-xdebuf false в .env&#10;-parsel новостей ленты и яндекса" />
-    <option name="LAST_COMMIT_MESSAGE" value="-аватарка&#10;-html редактор (в main убрал id=app &quot;vue&quot;)&#10;-xdebuf false в .env&#10;-parsel новостей ленты и яндекса" />
+    <MESSAGE value="-NewsParsing обработчик задач (очередей когда много link)" />
+    <option name="LAST_COMMIT_MESSAGE" value="-NewsParsing обработчик задач (очередей когда много link)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/news/index.blade.php</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

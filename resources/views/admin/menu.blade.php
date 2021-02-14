@@ -8,7 +8,10 @@
     <a class="nav-link" href="{{ route('admin.updateUser') }}">Пользователи</a>
 </li>
 <li class="nav-item {{ request()->routeIs('admin.parser')?'active':''}}">
-    <a class="nav-link" href="{{ route('admin.parser') }}">Parser</a>
+    <a class="nav-link" href="{{ route('admin.parser') }}">Обновить новости</a>
+</li>
+<li class="nav-item {{ request()->routeIs('vue')?'active':''}}">
+    <a class="nav-link" href="{{ route('vue') }}">Vue</a>
 </li>
 {{--<li class="nav-item {{ request()->routeIs('admin.downloader')?'active':''}}">--}}
 {{--    <a class="nav-link" href="{{ route('admin.downloader') }}">Скачать новость</a>--}}
