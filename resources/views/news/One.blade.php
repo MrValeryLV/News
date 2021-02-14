@@ -16,7 +16,7 @@
                             @if ($news)
                                 @if (!$news->isPrivate || Auth::check())
                                     <h2>{{ $news->title }}</h2>
-                                    <p>{{ $news->text }}</p>
+                                    <p>{!! $news->text !!}</p>
                                 @else
                                     Зарегистрируйтесь для просмотра
                                 @endif

@@ -26,6 +26,7 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::view('/about', 'about')->name('about');
 Route::view('/vue', 'vue')->name('vue');
 
+// todo уневерсальный обработчик c параметром $soc les10 начало
 Route::get('/auth/vk', [LoginController::class, 'loginVK'])->name('vklogin');
 Route::get('/auth/vk/response', [LoginController::class, 'responseVK'])->name('responseVK');
 
@@ -65,4 +66,11 @@ Route::group([
     Route::get('/one/{news}', [NewsController::class, 'show'])->name('show');
 });
 
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth', 'is_admin']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+
 Auth::routes();
+
+
+//APP_URL=http://localhost

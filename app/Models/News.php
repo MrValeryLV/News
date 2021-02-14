@@ -20,7 +20,7 @@ class News extends Model
     public static function rules() {
         $tableNameCategory = (new Category())->getTable();
         return [
-            'title' => ['required', 'min:10', 'max:20', new Admin()],
+            'title' => ['required', 'min:10', 'max:150', new Admin()],
             'text' => 'required',
             'category_id' => "required|exists:{$tableNameCategory},id",
             'image' => 'mimes:jpeg,png,bmp|max:1000',
